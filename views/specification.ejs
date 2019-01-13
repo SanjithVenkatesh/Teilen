@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111160453-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-111160453-1');
+        </script>
+
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+        <title>RideShare</title>
+	</head>
+	<body>
+    <div id="content">
+        <section id="landing">
+            <div class="name">Tell Us Who You Are!</div> 
+            <div id="intro">
+                <img src="assets/img/driver_icon.png" width="20%" height = "20%"/>
+                <input type="checkbox" name="vehicle" value="Driver"> I am a Driver<br>
+                <img src="assets/img/passenger_icon.png" width="20%" height = "20%"/>
+                <input type="checkbox" name="vehicle" value="Passenger" checked> I am a Passenger<br>
+                <p>Starting Address: <input type="text" name="Starting Address" value="Santa Barbara, CA 93106"><br></p>
+                <p>Destination Address: <input type="text" name="Destination Address" value="Irvine, CA 92697"><br></p>
+                <button type="button" onclick="alert('On to next page')">Next</button>
+            </div>
+            
+	</body>
+	<script type="text/javascript" src="assets/js/script.js"></script>
+</html>

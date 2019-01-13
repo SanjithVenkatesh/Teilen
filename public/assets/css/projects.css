@@ -1,0 +1,332 @@
+#content {
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--main-text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+#image-header {
+    position: relative;
+    height: 50vh;
+    margin-top: 10vh;
+}
+
+#title {
+    position: absolute;
+    /*background: rgba(221,179,179, 0.8); /* emphasis color w opacity */
+    background: var(--emphasis-color);
+    top: 2vh;
+    padding: 20px 20px;
+    font-size: 48px;
+    line-height: 50px;
+    font-weight: 700;
+    color: white;
+    z-index: 2;
+    font-family: 'Inconsolata', monospace;
+}
+
+#image, .section-image {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 1;
+    flex-basis: 400px;
+    flex-grow: 1;
+}
+
+#image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    padding-top: 40%;
+}
+
+.section-image {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+   
+    width: 100%;
+}
+
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    transition: 0.4s ease-out;
+}
+
+.section-image img {
+    position: absolute;
+    top: calc(50% * 0.9);
+    left: calc(50% * 0.9);
+    max-height: 100%;
+    max-width: 100%;
+    transform: scale(0.9) translate(-50%, -50%);
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.section-image:hover img {
+    position: absolute;
+    top: calc(50% * 1.1);
+    left: calc(50% * 1.1);
+    transform: scale(1.1) translate(-50%, -50%);
+}
+
+.caption {
+    opacity: 0.7;
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+
+p.text {
+    margin: 10px 0;
+}
+
+.section {
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    font-size: 24px;
+    line-height: 1.2em;
+    font-weight: 700;
+    font-family: 'Inconsolata', monospace;
+}
+
+#footer {
+    height: 0vh;
+    width: 100vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--emphasis-color);
+    transition: 1s ease-in-out;
+}
+ 
+#footer-container {
+    margin-top: 40px;
+    max-width: 600px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    opacity: 0;
+    min-height: calc(80vh - 40px);
+}
+
+.footer-header {
+    font-size: 24px;
+}
+
+#footer-projects {
+    width: 600px;
+    margin-bottom: 30px;
+}
+
+.project-category {
+    margin-top: 20px;
+    font-size: 21px;
+}
+
+#footer a {
+    color: white;
+    display: block;
+    font-family: 'Inconsolata', monospace;
+}
+
+#footer a:hover {
+    transform: translateX(5px);
+    text-decoration: underline;
+    animation: sideBounce .5s ease 0s infinite alternate;
+}
+
+.column {
+    display: inline-block;
+    width: calc(50% - 3px);
+    vertical-align: top;
+}
+
+@keyframes sideBounce {
+    from {
+        padding-left: 0px;
+    } to {
+        padding-left: 10px;
+    }
+}
+
+#lightbox {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    display: none;
+}
+
+#overlay {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#lightbox-image {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 90vh;
+    overflow: scroll;
+}
+
+#lightbox-image img {
+    width: 100%;
+    top: 0px;
+    transform: translate(-50%, 0);
+}
+
+#close {
+    color: white;
+    opacity: 0.4;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    transition: 0.3s;
+    font-size: 2em;
+    line-height: 0.7em;
+    text-align: center;
+}
+
+#close span {
+    opacity: 0;
+    font-size: 0.5em;
+    transition: 0.3s;
+}
+
+#close:hover {
+    opacity: 0.8;
+}
+
+#close:hover span {
+    opacity: 1;
+}
+
+a {
+    color: black;
+    font-family: 'Inconsolata', monospace;
+}
+
+#back {
+    position: relative;
+    top: 5vh;
+    display: block;
+    margin: 20px 0;
+}
+
+html {
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Karla', sans-serif;
+}
+
+body, #pseudobody {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    background: #fafafa;
+    --main-text-color: rgba(0, 0, 0, 0.8);
+    /*--emphasis-color: #DDB3B3;*/
+    --emphasis-color: #95C2EE;
+}
+
+@media (max-width: 650px) {
+    #content {
+        width: 80vw;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 18px;
+        line-height: 30px;
+        color: var(--main-text-color);
+    }
+
+    #footer-projects, #footer, #footer-container {
+        width: 100vw;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #footer-projects, #footer-container {
+        height: none;
+    }
+
+    #footer {
+        height: 130vh;
+    }
+
+    .column {
+        width: 50%;
+    }
+
+    #title {
+        position: relative;
+        bottom: 0;
+        top: auto;
+        padding: 20px;
+        font-size: 3em;
+        line-height: 1em;
+        font-weight: 700;
+        color: var(--emphasis-color);
+        background: rgba(0, 0, 0 ,0);
+        z-index: 2;
+        font-family: 'Inconsolata', monospace;
+        text-align: center;
+    }
+
+    #image {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: translateX(0);
+    }
+
+    /* 
+     * Select all .section children of #content, including the first one, and 
+     * adjust margin
+     */
+    #content > .section {
+        margin-top: 0px;
+    }
+
+    /* 
+     * Select all but the first .section child of #content,
+     * and remove previous rule.
+     */
+    #content > .section ~ .section {
+        margin-top: 60px;
+    }
+
+    #lightbox-image img {
+        width: 100%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}

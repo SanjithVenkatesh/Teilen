@@ -1,0 +1,376 @@
+#content {
+    max-width: 800px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 1);
+} 
+
+#landing {
+    margin: 0;
+}
+
+/** INTRO **/
+.name {
+    color: midnightblue;
+    font-size: 2.5em;
+    line-height: 1em;
+    font-weight: 700;
+    margin-bottom: 24px;
+    padding-top: 25vh;
+    font-family: 'Ubuntu', sans-serif;
+    transition: opacity 0.6s;
+    opacity: 0;
+}
+
+#intro {
+    margin: 24px 0px;
+    transition: opacity 0.9s;
+    opacity: 0;
+}
+
+#nav {
+    margin: 24px auto;
+}
+
+#intro a {
+    display: inline;
+    animation: none;
+}
+
+#intro a:hover {
+    transform: translateX(0);
+}
+
+#nav a {
+    margin: 6px 0px;
+    opacity: 0;
+    transition: opacity 0.9s ease-in-out;
+}
+
+/* ABOUT */
+#about div {
+    width: 100%;
+}
+
+/** ACTIVITIES **/
+#together {
+    position: relative;
+    top: 50%;
+    height: 40vh;
+    transition: 1s all;
+    transform: scale(0.9);
+}
+
+#tasks {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9); /* reduced opacity */
+    right:100%;
+    
+    padding: 12px;
+    width: 17vw;
+    min-height: 20vh;
+    max-height: 39vh;
+    overflow: scroll;
+}
+
+#tasks a {
+    position: relative;
+    
+    display: block;
+    transition: 0.8s ease-in-out;
+    opacity: 0;
+}
+
+#description {
+    position: absolute;
+    width: 75%;
+    top: 32vh;
+    
+    right: 0vw;
+    text-align: right;
+    transform: scale(0.9);
+    transition: transform 1s;
+    opacity: 1;
+}
+
+#description p {
+    background: rgba(255, 255, 255, 0.8);
+    position: relative;
+    bottom: 30px;
+    padding: 10px;
+    font-size: 14px; 
+    transition: 0.8s ease-in-out;
+}
+
+#background-img {
+    position: absolute;
+    width: 110%;
+    height: 40vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    overflow: hidden;
+    background: black;
+    background-color: rgba(0,0,255,0.3); /* emphasis color + opacity */
+}
+
+/*
+#background-img div {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--emphasis-color);
+    opacity: 0.5;
+    position: relative;
+}*/
+
+#background-img img {
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+/* MOBILE/NARROW VIEW */ 
+
+#mobile-activities {
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.activity-card {
+    padding: 10px;
+    background: yellow;
+    margin: 20px 0;
+    font-size: 0.8em;
+    line-height: 1.5em;
+}
+
+.activity-card .card-title {
+    color: yellow;
+    font-size: 1.2em;
+}
+
+.activity-card .read-more:hover {
+    cursor: pointer;
+}
+
+.read-more {
+    padding: 5px;
+}
+
+/* PORTFOLIO */
+#cards-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-row-gap: 20px;
+}
+
+.card {
+    position: relative;
+    
+    color: black;
+    transition: 0.4s all;
+    opacity: 0;
+    vertical-align: top;
+}
+
+.card li {
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+#portfolio .card-title {
+    font-size: 1.2em;
+    width: 100%;
+    line-height: 1.2em;
+    z-index: 2;
+    margin: 8px 0;
+}
+
+.card-links a {
+    color: grey;
+    padding: 0;
+    width: 100%;
+    opacity: 0.6;
+}
+
+.card img {
+    height: 50px;
+    z-index: 1;
+    display: block;
+    transition: 0.3s all;
+    margin: 5px 0;
+}
+
+.card:hover img { 
+    transform: rotate(-15deg);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 2px 0;
+}
+
+section {
+    margin-bottom: 120px;
+}
+
+a {
+    color: slateblue;
+    text-decoration: none;
+    transition: 0.2s all;
+    font-family: 'Quicksand', sans-serif;
+    display: block;
+}
+
+a:hover {
+    transform: translateX(5px);
+    text-decoration: underline;
+    animation: sideBounce .5s ease 0s infinite alternate;
+}
+
+.coming-soon:hover {
+    transform: translateX(0px);
+    animation: none;
+    text-decoration: none;
+}
+
+/* CONTACT */
+#background-fill {
+    width: 100vw;
+    background: black;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: 1s ease-in-out;
+}
+
+#contact .name, #contact a, #contact p {
+    color: white;
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+#contact {
+    height: 90vh;
+    margin-bottom: 0;
+    position: relative;
+}
+
+@keyframes sideBounce {
+    from {
+        padding-left: 0px;
+    } to {
+        padding-left: 10px;
+    }
+}
+
+@keyframes flash {
+    from {
+        color: rgba(0, 0, 0, 0.7);
+    } to {
+        color: rgba(0, 0, 0, 0);
+    }
+}
+
+#description p.flash-class {
+    animation: flash 1s linear 1s infinite alternate;
+}
+
+html {
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+    color: black;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    background: #fafafa;
+    --main-text-color: Cerise;
+    /*--emphasis-color: #DDB3B3;*/
+    --emphasis-color: Red;
+}
+
+@media (max-width: 650px) {
+    #content, .card-links a {
+        width: 70vw;
+        text-align: center;
+    }
+    
+    .name {
+        font-size: 1.5em;
+        line-height: 1em;
+    }
+
+    #background-img {
+        display: none;
+    }
+
+    #description {
+        display: none;
+    }
+
+    .card-1 img, .card-2 img {
+        margin: 0 auto;
+    }
+
+    .card-1, .card-2 {
+        width: 100%;
+        display: block;
+    }
+
+    a:hover {
+        animation: none;
+    }
+
+    section {
+        margin-bottom: 30px;
+    }
+
+    .name {
+        padding-top: 8vh;
+    }
+
+    #landing .name {
+        padding-top: 20vh;
+    }
+
+    #background-fill {
+        height: 100vh;
+    }
+
+    #contact p, #contact a {
+        opacity: 1;
+    }
+}
+
+/* 
+INITIAL FOR WAYPOINTS. 
+This is here so it's easier to work without
+internet/ when waypoints won't work. 
+Remove later.
+*/
+/*#together, #mobile-activities, .card-1, .card-2 {
+    opacity: 1;
+}*/

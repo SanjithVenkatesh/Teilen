@@ -1,0 +1,23 @@
+{
+  "name": "teilen",
+  "version": "1.0.0",
+  "description": "Teilen",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm ",
+    "start": "node ./bin/www"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "client-sessions": "^0.8.0",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0",
+    "passport-google-plus-token": "^2.1.0",
+    "twilio": "^3.27.1"
+  }
+}

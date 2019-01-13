@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111160453-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-111160453-1');
+        </script>
+
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+        <title>RideShare</title>
+	</head>
+	<body>
+    <div id="content">
+        <section id="landing">
+            <div class="name">Specify Your Travel Times</div> 
+            <div id="intro">
+                <img src="assets/img/dep_icon.png" width="10%" height = "10%"/>
+                <form>
+                        Depart Date: <input type="date" name="Date">
+                </form>
+                <label for="there_time" class="screen-reader">Depart Time</label>
+                <select name="there_time" id="there_time" class="slim there_time">
+                <option value="anytime" selected="selected">anytime</option><option value="early" >early (12a-8a)</option><option value="morning" >morning (8a-12p)</option><option value="afternoon" >afternoon (12p-5p)</option><option value="evening" >evening (5p-9p)</option><option value="night" >night (9p-12a)</option><option value="1:00am" >1:00am</option><option value="2:00am" >2:00am</option><option value="3:00am" >3:00am</option><option value="4:00am" >4:00am</option><option value="5:00am" >5:00am</option><option value="6:00am" >6:00am</option><option value="7:00am" >7:00am</option><option value="8:00am" >8:00am</option><option value="9:00am" >9:00am</option><option value="10:00am" >10:00am</option><option value="11:00am" >11:00am</option><option value="12:00pm" >noon</option><option value="1:00pm" >1:00pm</option><option value="2:00pm" >2:00pm</option><option value="3:00pm" >3:00pm</option><option value="4:00pm" >4:00pm</option><option value="5:00pm" >5:00pm</option><option value="6:00pm" >6:00pm</option><option value="7:00pm" >7:00pm</option><option value="8:00pm" >8:00pm</option><option value="9:00pm" >9:00pm</option><option value="10:00pm" >10:00pm</option><option value="11:00pm" >11:00pm</option>                                        </select>
+                <p><img src="assets/img/return_icon.png" width="10%" height = "10%"/></p>
+                <form>
+                        Return Date: <input type="date" name="Date">
+                </form>
+                <label for="there_time" class="screen-reader">Return Time</label>
+                <select name="there_time" id="there_time" class="slim there_time">
+                <option value="anytime" selected="selected">anytime</option><option value="early" >early (12a-8a)</option><option value="morning" >morning (8a-12p)</option><option value="afternoon" >afternoon (12p-5p)</option><option value="evening" >evening (5p-9p)</option><option value="night" >night (9p-12a)</option><option value="1:00am" >1:00am</option><option value="2:00am" >2:00am</option><option value="3:00am" >3:00am</option><option value="4:00am" >4:00am</option><option value="5:00am" >5:00am</option><option value="6:00am" >6:00am</option><option value="7:00am" >7:00am</option><option value="8:00am" >8:00am</option><option value="9:00am" >9:00am</option><option value="10:00am" >10:00am</option><option value="11:00am" >11:00am</option><option value="12:00pm" >noon</option><option value="1:00pm" >1:00pm</option><option value="2:00pm" >2:00pm</option><option value="3:00pm" >3:00pm</option><option value="4:00pm" >4:00pm</option><option value="5:00pm" >5:00pm</option><option value="6:00pm" >6:00pm</option><option value="7:00pm" >7:00pm</option><option value="8:00pm" >8:00pm</option><option value="9:00pm" >9:00pm</option><option value="10:00pm" >10:00pm</option><option value="11:00pm" >11:00pm</option>                                        </select>
+                <p><button type="button" onclick="alert('On to next page')">Next</button></p>
+            </div>
+            
+	</body>
+	<script type="text/javascript" src="assets/js/script.js"></script>
+</html>
